@@ -1,0 +1,15 @@
+name: checkout-lab
+on: push
+jobs: 
+    build-job:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: list all the files and run ls -a 
+              run: ls -a 
+
+            - name:  checkout actions 
+              uses: actions/checkout@v4
+
+            - name: list after checkout 
+              run: ls -a 
+        
